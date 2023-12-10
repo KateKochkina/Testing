@@ -1,0 +1,111 @@
+RESULT_1
+
+root@LAPTOP-2695KCG7:/home# /bin/python3.11 /home/aaa/Python_Авито/test_morse_encode.py
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('')
+Expecting:
+    ''
+ok
+Trying:
+    encode('Москва')
+Expecting:
+    Traceback (most recent call last):
+        ...
+    KeyError: 'М'
+ok
+1 items had no tests:
+    __main__
+1 items passed all tests:
+   3 tests in __main__.encode
+3 tests in 2 items.
+3 passed and 0 failed.
+Test passed.
+
+
+
+
+
+RESULT_2
+
+root@LAPTOP-2695KCG7:/home# /bin/python3.11 /home/aaa/Python_Авито/test_morse_decode.py
+root@LAPTOP-2695KCG7:/home# pytest -v
+================================================== test session starts ==================================================
+platform linux -- Python 3.11.6, pytest-7.4.3, pluggy-1.3.0 -- /usr/bin/python3.11
+cachedir: .pytest_cache
+rootdir: /home
+collected 3 items                                                                                                       
+
+aaa/Python_Авито/test_morse_decode.py::test_decode[.... . .-.. .-.. ----HELLO] PASSED                             [ 33%]
+aaa/Python_Авито/test_morse_decode.py::test_decode[-.-. --- -- .--.-COMP] PASSED                                  [ 66%]
+aaa/Python_Авито/test_morse_decode.py::test_decode[-- --- .-. ... .-MORSE] PASSED                                 [100%]
+
+=================================================== 3 passed in 0.01s ===================================================
+
+
+
+
+
+RESULT_3
+
+root@LAPTOP-2695KCG7:/home/aaa/Python_Авито# python -m unittest -v test_one_hot_encode_3.py
+test_duplicate_input (test_one_hot_encode_3.TestFitTransform.test_duplicate_input) ... ok
+test_empty_input (test_one_hot_encode_3.TestFitTransform.test_empty_input) ... ok
+test_invalid_input (test_one_hot_encode_3.TestFitTransform.test_invalid_input) ... ok
+test_multiple_inputs (test_one_hot_encode_3.TestFitTransform.test_multiple_inputs) ... ok
+test_non_string_input (test_one_hot_encode_3.TestFitTransform.test_non_string_input) ... ok
+test_simple_input (test_one_hot_encode_3.TestFitTransform.test_simple_input) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK
+
+
+
+
+
+RESULT_4
+
+root@LAPTOP-2695KCG7:/home/aaa# python -m pytest -v /home/aaa/Python_Авито/test_one_hot_encode_4.py
+================================================== test session starts ==================================================
+platform linux -- Python 3.11.6, pytest-7.4.3, pluggy-1.3.0 -- /usr/bin/python3.11
+cachedir: .pytest_cache
+rootdir: /home/aaa
+collected 6 items                                                                                                       
+
+Python_Авито/test_one_hot_encode_4.py::test_empty_input PASSED                                                    [ 16%]
+Python_Авито/test_one_hot_encode_4.py::test_simple_input PASSED                                                   [ 33%]
+Python_Авито/test_one_hot_encode_4.py::test_multiple_inputs PASSED                                                [ 50%]
+Python_Авито/test_one_hot_encode_4.py::test_non_string_input PASSED                                               [ 66%]
+Python_Авито/test_one_hot_encode_4.py::test_invalid_input PASSED                                                  [ 83%]
+Python_Авито/test_one_hot_encode_4.py::test_duplicate_input PASSED                                                [100%]
+
+=================================================== 6 passed in 0.02s ===================================================
+
+
+
+
+
+RESULT_5
+
+root@LAPTOP-2695KCG7:/home/aaa/Python_Авито# python -m unittest -v test_what_is_year_now.py
+test_invalid_date_format (test_what_is_year_now.TestWhatIsYearNow.test_invalid_date_format) ... ok
+test_year_in_DD_MM_YYYY_format (test_what_is_year_now.TestWhatIsYearNow.test_year_in_DD_MM_YYYY_format) ... ok
+test_year_in_YYYY_MM_DD_format (test_what_is_year_now.TestWhatIsYearNow.test_year_in_YYYY_MM_DD_format) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+OK
+
+root@LAPTOP-2695KCG7:/home/aaa/Python_Авито# python -m coverage report /home/aaa/Python_Авито/test_what_is_year_now.py
+Name                       Stmts   Miss  Cover
+----------------------------------------------
+test_what_is_year_now.py      22      1    95%
+----------------------------------------------
+TOTAL                         22      1    95%
